@@ -1,0 +1,12 @@
+CREATE TABLE groceries (ID INTEGER PRIMARY KEY, name TEXT, price INTEGER, quantity INTEGER, aisle INTEGER, rating INTEGER);
+
+INSERT into groceries values (1, "Bread",3.99, 20, 26, 5);
+INSERT into groceries values (2, "Peas", .99,100, 23, 4);
+INSERT into groceries values (3, "Flour",3.50, 26, 21, 6);
+INSERT into groceries values (4, "Soda", 3.89, 15, 21, 5);
+INSERT into groceries values (5, "Jelly",6.99, 35, 21, 5);
+
+SELECT * FROM groceries ORDER BY aisle;
+SELECT id,name, rating FROM groceries ORDER BY id ;
+SELECT name, quantity FROM groceries GROUP BY name;
+SELECT SUM(price) FROM groceries;
